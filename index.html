@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DM Smart Electronics | ArsTech Group</title>
   <style>
+    /* ====== GLOBAL STYLE ====== */
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -14,109 +15,123 @@
     }
 
     .overlay {
-      background-color: rgba(0, 10, 30, 0.85);
+      background-color: rgba(0, 10, 30, 0.88);
       min-height: 100vh;
       padding: 0;
     }
 
+    a {
+      text-decoration: none;
+      color: #00aaff;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #66ccff;
+    }
+
+    /* ====== HEADER ====== */
     header {
-      text-align: center;
-      padding: 40px 20px 10px 20px;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background-color: rgba(0, 10, 30, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 10;
     }
 
-    header img.logo {
-      width: 200px;
-      margin-bottom: 10px;
+    header img {
+      height: 50px;
     }
 
+    nav a {
+      margin: 0 15px;
+      font-weight: 500;
+      color: #d9d9d9;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    /* ====== HERO SECTION ====== */
     .hero {
       text-align: center;
-      padding: 40px 20px;
-    }
-
-    .hero img.perfil {
-      width: 160px;
-      border-radius: 50%;
-      border: 3px solid #00aaff;
-      margin-bottom: 15px;
+      padding: 100px 20px 80px 20px;
     }
 
     .hero h1 {
-      font-size: 28px;
+      font-size: 42px;
       color: #ffffff;
-      margin: 5px 0;
+      margin-bottom: 15px;
     }
 
     .hero h3 {
       color: #9fd6ff;
-      margin: 5px 0 15px 0;
       font-weight: 400;
+      margin-bottom: 30px;
     }
 
-    /* === BOTÕES RESPONSIVOS === */
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 15px;
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      color: #c9c9c9;
+      line-height: 1.6;
+      font-size: 18px;
     }
 
-    .buttons a {
-      text-decoration: none;
+    .btn-primary {
+      display: inline-block;
       background-color: #0078d4;
-      color: white;
-      padding: 10px 20px;
+      color: #fff;
+      padding: 12px 25px;
       border-radius: 6px;
-      transition: 0.3s;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 120px;
-      flex: 1 1 30%;
-      max-width: 180px;
+      font-weight: 500;
     }
 
-    .buttons a:hover {
+    .btn-primary:hover {
       background-color: #0094ff;
-      transform: scale(1.05);
     }
 
+    /* ====== SECTIONS ====== */
     section {
-      max-width: 900px;
-      margin: 60px auto;
-      background-color: rgba(255, 255, 255, 0.04);
+      max-width: 1100px;
+      margin: 80px auto;
       padding: 40px;
+      background-color: rgba(255, 255, 255, 0.03);
       border-radius: 12px;
       backdrop-filter: blur(6px);
     }
 
     section h2 {
       color: #00aaff;
+      font-size: 26px;
       border-bottom: 2px solid #00aaff;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-      font-size: 22px;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
     }
 
     section p {
-      line-height: 1.6;
       color: #d1d1d1;
+      line-height: 1.6;
     }
 
+    /* ====== SERVICES ====== */
     .services {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
       justify-content: center;
+      gap: 25px;
     }
 
     .card {
       background-color: rgba(255, 255, 255, 0.07);
       border-radius: 10px;
-      padding: 20px;
-      flex: 1 1 260px;
+      padding: 25px;
+      flex: 1 1 250px;
       text-align: center;
       transition: 0.3s;
     }
@@ -126,107 +141,180 @@
       background-color: rgba(0, 170, 255, 0.15);
     }
 
+    /* ====== ARSTECH SECTION ====== */
     .arstech {
       text-align: center;
     }
 
     .arstech img {
-      width: 220px;
-      margin: 15px 0;
+      width: 240px;
+      margin: 20px 0;
     }
 
+    /* ====== ABOUT DIOGO ====== */
+    .about-diogo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .about-diogo img {
+      width: 180px;
+      border-radius: 50%;
+      border: 3px solid #00aaff;
+    }
+
+    .about-diogo div {
+      max-width: 500px;
+    }
+
+    .about-diogo h3 {
+      color: #00aaff;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background-color: #0078d4;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #0094ff;
+    }
+
+    /* ====== FOOTER ====== */
     footer {
       text-align: center;
       padding: 30px;
-      color: #888;
+      background-color: rgba(0, 10, 30, 0.95);
+      color: #aaa;
       font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* === RESPONSIVIDADE === */
-    @media (max-width: 600px) {
+    /* ====== MOBILE ====== */
+    @media (max-width: 700px) {
       .hero h1 {
-        font-size: 22px;
+        font-size: 28px;
       }
-
-      .hero h3 {
-        font-size: 16px;
-      }
-
-      .buttons {
+      header {
         flex-direction: column;
-        align-items: center;
       }
-
-      .buttons a {
-        width: 80%;
-        max-width: 300px;
+      nav {
+        margin-top: 10px;
+      }
+      .buttons {
+        justify-content: center;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="overlay">
+    <!-- HEADER -->
     <header>
-      <img src="logo.jpg" alt="DM Smart Electronics" class="logo" />
+      <img src="logo.jpg" alt="DM Smart Electronics Logo" />
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#arstech">ArsTech Group</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
+    <!-- HERO -->
     <div class="hero">
-      <img src="perfil.png" alt="Diogo del Mauro" class="perfil" />
-      <h1>Diogo del Mauro</h1>
-      <h3>Embedded Systems Project Manager | Firmware & Hardware Developer</h3>
-
-      <div class="buttons">
-        <a href="https://wa.me/message/2PPRJVICJ3GSG1" target="_blank">💬 WhatsApp</a>
-        <a href="https://www.linkedin.com/in/diogo-del-mauro-76922690/" target="_blank">🔗 LinkedIn</a>
-        <a href="mailto:dmsmartelectronics@outlook.com">📧 E-mail</a>
-      </div>
+      <h1>DM Smart Electronics</h1>
+      <h3>From Concept to Certification</h3>
+      <p>
+        We develop embedded systems and hardware solutions from design to certification.  
+        Our expertise includes STM32-based firmware, RF communication, and EMC-compliant product development for industrial and IoT markets.
+      </p>
+      <a href="#contact" class="btn-primary">Contact Diogo del Mauro</a>
     </div>
 
-    <section>
+    <!-- ABOUT -->
+    <section id="about">
       <h2>About DM Smart Electronics</h2>
       <p>
-        DM Smart Electronics is part of the ArsTech Group and specializes in end-to-end electronic product development — from concept and schematic design to firmware development, EMC validation, and international certification (IEC, CISPR, ISO, ANATEL).
+        DM Smart Electronics is part of the <strong>ArsTech Group</strong>, focusing on complete electronic product development — from concept and schematic design to firmware engineering, EMC testing, and international certification (IEC, CISPR, ISO, ANATEL).  
         <br><br>
-        With a strong focus on STM32 microcontrollers, RF communication systems, and EMC-compliant hardware, we deliver efficient, reliable, and certification-ready embedded solutions for industrial and IoT applications.
+        We deliver certification-ready embedded systems with precision hardware design, ensuring compliance and high reliability.
       </p>
     </section>
 
-    <section>
+    <!-- SERVICES -->
+    <section id="services">
       <h2>Our Expertise</h2>
       <div class="services">
         <div class="card">
           <h3>Embedded Systems</h3>
-          <p>Firmware development in C/C++ using STM32 HAL and bare-metal approaches.</p>
+          <p>Firmware in C/C++ using STM32 HAL and bare-metal frameworks.</p>
         </div>
         <div class="card">
-          <h3>RF & Wireless</h3>
-          <p>Design and optimization of wireless transmission systems operating at 915 MHz.</p>
+          <h3>RF & Telemetry</h3>
+          <p>Design and optimization of wireless systems operating at 915 MHz.</p>
         </div>
         <div class="card">
           <h3>EMC & Certification</h3>
-          <p>Full compliance support with IEC, CISPR, ISO, and ANATEL standards.</p>
+          <p>Full compliance with IEC, CISPR, ISO, and ANATEL standards.</p>
         </div>
         <div class="card">
           <h3>PCB Design</h3>
-          <p>High-performance PCB design using Altium Designer and Eagle, ensuring signal integrity and low EMI.</p>
+          <p>Professional PCB design using Altium Designer and Eagle for low EMI and signal integrity.</p>
         </div>
       </div>
     </section>
 
-    <section class="arstech">
+    <!-- ARSTECH -->
+    <section id="arstech" class="arstech">
       <h2>ArsTech Group</h2>
       <img src="ArsTech.png" alt="ArsTech Group" />
       <p>
-        The ArsTech Group brings together six companies with expertise in electronics development, EMC testing setups, lithium battery systems, and industrial automation.
+        The ArsTech Group unites six companies with expertise in electronics development, EMC testing setups, lithium battery systems, and process automation.  
         <br><br>
-        Through strategic collaboration, the group provides advanced engineering solutions that combine design, compliance, and process automation expertise.
+        Together, we provide complete engineering and industrial innovation solutions.
       </p>
     </section>
 
+    <!-- ABOUT DIOGO -->
+    <section id="contact" class="about-diogo">
+      <img src="perfil.png" alt="Diogo del Mauro" />
+      <div>
+        <h3>Diogo del Mauro</h3>
+        <p>
+          Embedded Systems Project Manager | Firmware & Hardware Developer  
+          <br><br>
+          Specialized in embedded firmware (STM32), RF design, and product certification for industrial and IoT systems.
+        </p>
+        <div class="buttons">
+          <a href="https://wa.me/message/2PPRJVICJ3GSG1" target="_blank">💬 WhatsApp</a>
+          <a href="https://www.linkedin.com/in/diogo-del-mauro-76922690/" target="_blank">🔗 LinkedIn</a>
+          <a href="mailto:dmsmartelectronics@outlook.com">📧 E-mail</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
       <p>© 2025 DM Smart Electronics — Part of ArsTech Group</p>
     </footer>
   </div>
 </body>
 </html>
-
