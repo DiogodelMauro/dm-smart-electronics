@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DM Smart Electronics | ArsTech Group</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: url("fundo.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #e4e6eb;
+    }
+
+    .overlay {
+      background-color: rgba(0, 10, 30, 0.85);
+      min-height: 100vh;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px 20px;
+    }
+
+    header img.logo {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero img.perfil {
+      width: 160px;
+      border-radius: 50%;
+      border: 3px solid #00aaff;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      color: #ffffff;
+      margin: 5px 0;
+    }
+
+    .hero h3 {
+      color: #9fd6ff;
+      margin: 5px 0 15px 0;
+      font-weight: 400;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background-color: #0078d4;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #0094ff;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: rgba(255, 255, 255, 0.04);
+      padding: 40px;
+      border-radius: 12px;
+      backdrop-filter: blur(6px);
+    }
+
+    section h2 {
+      color: #00aaff;
+      border-bottom: 2px solid #00aaff;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    section p {
+      line-height: 1.6;
+      color: #d1d1d1;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 260px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: rgba(0, 170, 255, 0.15);
+    }
+
+    .arstech {
+      text-align: center;
+    }
+
+    .arstech img {
+      width: 220px;
+      margin: 15px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #888;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 22px;
+      }
+      .hero h3 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <img src="logo.jpg" alt="DM Smart Electronics" class="logo" />
+    </header>
+
+    <div class="hero">
+      <img src="perfil.png" alt="Diogo del Mauro" class="perfil" />
+      <h1>Diogo del Mauro</h1>
+      <h3>Embedded Systems Project Manager | Firmware & Hardware Developer</h3>
+
+      <div class="buttons">
+        <a href="https://wa.me/message/2PPRJVICJ3GSG1" target="_blank">💬 WhatsApp</a>
+        <a href="https://www.linkedin.com/in/diogo-del-mauro-76922690/" target="_blank">🔗 LinkedIn</a>
+        <a href="mailto:dmsmartelectronics@outlook.com">📧 E-mail</a>
+      </div>
+    </div>
+
+    <section>
+      <h2>About DM Smart Electronics</h2>
+      <p>
+        DM Smart Electronics is part of the ArsTech Group and specializes in end-to-end electronic product development — from concept and schematic design to firmware development, EMC validation, and international certification (IEC, CISPR, ISO, ANATEL).
+        <br><br>
+        With a strong focus on STM32 microcontrollers, RF communication systems, and EMC-compliant hardware, we deliver efficient, reliable, and certification-ready embedded solutions for industrial and IoT applications.
+      </p>
+    </section>
+
+    <section>
+      <h2>Our Expertise</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Embedded Systems</h3>
+          <p>Firmware development in C/C++ using STM32 HAL and bare-metal approaches.</p>
+        </div>
+        <div class="card">
+          <h3>RF & Wireless</h3>
+          <p>Design and optimization of wireless transmission systems operating at 915 MHz.</p>
+        </div>
+        <div class="card">
+          <h3>EMC & Certification</h3>
+          <p>Full compliance support with IEC, CISPR, ISO, and ANATEL standards.</p>
+        </div>
+        <div class="card">
+          <h3>PCB Design</h3>
+          <p>High-performance PCB design using Altium Designer and Eagle, ensuring signal integrity and low EMI.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="arstech">
+      <h2>ArsTech Group</h2>
+      <img src="ArsTech.png" alt="ArsTech Group" />
+      <p>
+        The ArsTech Group brings together six companies with expertise in electronics development, EMC testing setups, lithium battery systems, and industrial automation.
+        <br><br>
+        Through strategic collaboration, the group provides advanced engineering solutions that combine design, compliance, and process automation expertise.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 DM Smart Electronics — Part of ArsTech Group</p>
+    </footer>
+  </div>
+</body>
+</html>
