@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DM Smart Electronics | ArsTech Group</title>
   <style>
-    /* ===== GLOBAL ===== */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -35,11 +34,11 @@
       text-decoration: none;
       color: #00aaff;
       transition: 0.3s;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
-
     a:hover { color: #66ccff; }
 
-    /* ===== HEADER ===== */
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -49,6 +48,7 @@
       padding: 15px 40px;
       background-color: rgba(0, 10, 30, 0.92);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
       z-index: 5;
     }
 
@@ -62,14 +62,15 @@
 
     nav a:hover { color: #00aaff; }
 
-    /* ===== HERO ===== */
+    /* HERO */
     .hero {
       position: relative;
       text-align: center;
       padding: 120px 20px 100px 20px;
       background: url("fundo.png") center/cover no-repeat;
+      background-blend-mode: overlay;
     }
-    
+
     .hero::before {
       content: "";
       position: absolute;
@@ -80,26 +81,15 @@
       background: linear-gradient(180deg, rgba(0,10,30,0.85), rgba(0,10,30,0.65));
       z-index: 0;
     }
-    
+
     .hero h1, .hero h3, .hero p, .btn-primary {
       position: relative;
       z-index: 1;
       text-shadow: 0 2px 6px rgba(0,0,0,0.7);
     }
 
-
-    .hero h1 {
-      font-size: 44px;
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-
-    .hero h3 {
-      color: #9fd6ff;
-      font-weight: 400;
-      margin-bottom: 25px;
-    }
-
+    .hero h1 { font-size: 44px; color: #fff; margin-bottom: 10px; }
+    .hero h3 { color: #9fd6ff; font-weight: 400; margin-bottom: 25px; }
     .hero p {
       max-width: 800px;
       margin: 0 auto 35px auto;
@@ -117,17 +107,18 @@
       font-weight: 500;
       transition: 0.3s;
     }
-
     .btn-primary:hover { transform: scale(1.05); }
 
-    /* ===== SECTIONS ===== */
+    /* SECTIONS */
     section {
       max-width: 1100px;
-      margin: 80px auto;
+      margin: 80px auto 100px auto;
       padding: 40px;
       background-color: rgba(255, 255, 255, 0.04);
       border-radius: 12px;
       backdrop-filter: blur(6px);
+      scroll-margin-top: 100px;
+      transition: all 0.5s ease-in-out;
     }
 
     section h2 {
@@ -138,14 +129,13 @@
       margin-bottom: 25px;
       text-align: center;
     }
-
     section p {
       color: #d1d1d1;
       line-height: 1.6;
       text-align: center;
     }
 
-    /* ===== OUR FOCUS ===== */
+    /* FOCUS */
     .focus {
       display: flex;
       flex-wrap: wrap;
@@ -161,102 +151,17 @@
       width: 240px;
       transition: 0.3s;
     }
-
     .focus-card:hover {
       transform: translateY(-6px);
       background-color: rgba(0, 170, 255, 0.15);
     }
-
     .focus-card img {
       width: 60px;
       margin-bottom: 10px;
       opacity: 0.9;
     }
 
-    /* ===== SERVICES ===== */
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    .card {
-      background-color: rgba(255, 255, 255, 0.07);
-      border-radius: 10px;
-      padding: 25px;
-      flex: 1 1 250px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      background-color: rgba(0, 170, 255, 0.15);
-    }
-
-    /* ===== PROJECTS ===== */
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    .proj-card {
-      background-color: rgba(255, 255, 255, 0.06);
-      border-radius: 10px;
-      padding: 20px;
-      width: 300px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .proj-card:hover {
-      transform: translateY(-5px);
-      background-color: rgba(0, 170, 255, 0.18);
-    }
-
-    .proj-card h4 { color: #00aaff; margin-bottom: 10px; }
-
-    /* ===== DIOGO ===== */
-    .about-diogo {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .about-diogo img {
-      width: 180px;
-      border-radius: 50%;
-      border: 3px solid #00aaff;
-    }
-
-    .about-diogo div { max-width: 500px; }
-
-    .about-diogo h3 { color: #00aaff; margin-bottom: 10px; }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: left;
-      gap: 10px;
-      margin-top: 15px;
-    }
-
-    .buttons a {
-      background: #0078d4;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-size: 15px;
-    }
-
-    .buttons a:hover { background-color: #0094ff; }
-
-    /* ===== FOOTER ===== */
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px;
@@ -265,17 +170,13 @@
       font-size: 14px;
     }
 
-    section {
-      scroll-margin-top: 100px;
-      transition: all 0.5s ease-in-out;
-    }
-
-    /* ===== MOBILE ===== */
     @media (max-width: 700px) {
       .hero h1 { font-size: 28px; }
-      header {  backdrop-filter: blur(10px); }
+      header { flex-direction: column; }
       nav { margin-top: 10px; }
       .buttons { justify-content: center; }
+      section { padding: 25px; }
+      .about-diogo { text-align: center; }
     }
   </style>
 </head>
@@ -283,7 +184,6 @@
 <body>
   <canvas id="bg"></canvas>
   <div class="overlay">
-    <!-- HEADER -->
     <header>
       <img src="logo.jpg" alt="DM Smart Electronics Logo" />
       <nav>
@@ -295,7 +195,6 @@
       </nav>
     </header>
 
-    <!-- HERO -->
     <div class="hero">
       <h1>DM Smart Electronics</h1>
       <h3>Engineering Intelligent Systems — Connecting Hardware, Data & Innovation</h3>
@@ -305,7 +204,6 @@
       <a href="#contact" class="btn-primary">Contact Us</a>
     </div>
 
-    <!-- ABOUT -->
     <section id="about">
       <h2>About DM Smart Electronics</h2>
       <p>
@@ -313,85 +211,25 @@
       </p>
     </section>
 
-    <!-- FOCUS -->
     <section id="focus">
       <h2>Our Focus</h2>
       <div class="focus">
-        <div class="focus-card">
-          <img src="ai.png" alt="AI" />
-          <h4>Artificial Intelligence</h4>
-          <p>Integration of AI for predictive and adaptive embedded systems.</p>
-        </div>
-        <div class="focus-card">
-          <img src="iot.png" alt="IoT" />
-          <h4>IoT & Connectivity</h4>
-          <p>IoT-ready architectures for industrial and smart environments.</p>
-        </div>
-        <div class="focus-card">
-          <img src="rf.png" alt="Telemetry" />
-          <h4>RF & Telemetry</h4>
-          <p>Long-range wireless data communication and monitoring.</p>
-        </div>
-        <div class="focus-card">
-          <img src="pcb.png" alt="Hardware" />
-          <h4>Hardware Design</h4>
-          <p>Precision hardware and certification-grade PCB layouts.</p>
-        </div>
+        <div class="focus-card"><img src="ai.png" alt="AI" /><h4>Artificial Intelligence</h4><p>Integration of AI for predictive and adaptive embedded systems.</p></div>
+        <div class="focus-card"><img src="iot.png" alt="IoT" /><h4>IoT & Connectivity</h4><p>IoT-ready architectures for industrial and smart environments.</p></div>
+        <div class="focus-card"><img src="rf.png" alt="Telemetry" /><h4>RF & Telemetry</h4><p>Long-range wireless data communication and monitoring.</p></div>
+        <div class="focus-card"><img src="pcb.png" alt="Hardware" /><h4>Hardware Design</h4><p>Precision hardware and certification-grade PCB layouts.</p></div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services">
-      <h2>Our Expertise</h2>
-      <div class="services">
-        <div class="card"><h3>Embedded Systems</h3><p>Firmware in C/C++ using STM32 HAL and bare-metal frameworks.</p></div>
-        <div class="card"><h3>EMC & Certification</h3><p>Compliance with IEC, CISPR, ISO, and ANATEL standards.</p></div>
-        <div class="card"><h3>PCB Design</h3><p>High-performance designs ensuring signal integrity and low EMI.</p></div>
-        <div class="card"><h3>Product Validation</h3><p>End-to-end testing, calibration, and traceability management.</p></div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2>Projects & Achievements</h2>
-      <div class="projects">
-        <div class="proj-card"><h4>Anti-Crushing Safety System</h4><p>Embedded firmware and calibration routines certified under IEC/EN standards.</p></div>
-        <div class="proj-card"><h4>RF Telemetry 915 MHz</h4><p>Wireless communication system for real-time industrial monitoring.</p></div>
-        <div class="proj-card"><h4>STM32 Industrial Controller</h4><p>Custom hardware with SPI flash logging and LIN/CAN communication.</p></div>
-        <div class="proj-card"><h4>BMS Development</h4><p>Electronic design support for lithium battery management systems.</p></div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="about-diogo">
-      <img src="perfil.png" alt="Diogo del Mauro" />
-      <div>
-        <h3>Diogo del Mauro</h3>
-        <p>
-          Embedded Systems Project Manager | Firmware & Hardware Developer  
-          <br><br>
-          Specialized in STM32, RF, and EMC compliance for industrial IoT and smart systems.
-        </p>
-        <div class="buttons">
-          <a href="https://wa.me/message/2PPRJVICJ3GSG1" target="_blank">💬 WhatsApp</a>
-          <a href="https://www.linkedin.com/in/diogo-del-mauro-76922690/" target="_blank">🔗 LinkedIn</a>
-          <a href="mailto:dmsmartelectronics@outlook.com">📧 E-mail</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer>
       <p>© 2025 DM Smart Electronics — Intelligent Embedded Systems | Part of ArsTech Group</p>
     </footer>
   </div>
 
   <script>
-    // ===== ANIMAÇÃO DE FUNDO =====
     const canvas = document.getElementById("bg");
     const ctx = canvas.getContext("2d");
     let w, h, particles;
-
     function resize() {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
@@ -402,7 +240,6 @@
         vy: (Math.random() - 0.5) * 0.5
       }));
     }
-
     function draw() {
       ctx.clearRect(0, 0, w, h);
       ctx.fillStyle = "#00aaff";
@@ -417,7 +254,6 @@
       }
       requestAnimationFrame(draw);
     }
-
     window.addEventListener("resize", resize);
     resize();
     draw();
