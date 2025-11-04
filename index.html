@@ -62,13 +62,19 @@
 
     nav a:hover { color: #00aaff; }
 
-    /* ===== HERO ===== */
+   /* ===== HERO ===== */
     .hero {
+      position: relative;
       text-align: center;
       padding: 120px 20px 100px 20px;
       background: url("fundo.png") center/cover no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-blend-mode: overlay;
+      overflow: hidden;
     }
-
+    
+    /* Camada escura com gradiente suave */
     .hero::before {
       content: "";
       position: absolute;
@@ -76,41 +82,52 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(0,10,30,0.85), rgba(0,10,30,0.65));
+      background: linear-gradient(
+        rgba(0, 5, 20, 0.85),
+        rgba(0, 15, 40, 0.75)
+      );
+      backdrop-filter: brightness(0.6);
       z-index: 0;
     }
     
-    .hero h1 {
-      font-size: 44px;
-      color: #ffffff;
-      margin-bottom: 10px;
+    /* Textos e botão acima da camada */
+    .hero h1,
+    .hero h3,
+    .hero p,
+    .btn-primary {
+      position: relative;
+      z-index: 1;
     }
-
+    
+    /* Destaque visual do título */
+    .hero h1 {
+      font-size: 48px;
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 3px 8px rgba(0, 170, 255, 0.6);
+      margin-bottom: 15px;
+    }
+    
+    /* Subtítulo mais visível */
     .hero h3 {
-      color: #9fd6ff;
+      color: #7fd8ff;
+      font-size: 22px;
       font-weight: 400;
       margin-bottom: 25px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     }
-
+    
+    /* Texto introdutório */
     .hero p {
       max-width: 800px;
       margin: 0 auto 35px auto;
-      color: #c9c9c9;
-      line-height: 1.6;
+      color: #d6e9ff;
+      line-height: 1.7;
       font-size: 18px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     }
 
-    .btn-primary {
-      display: inline-block;
-      background: linear-gradient(90deg, #0078d4, #00aaff);
-      color: white;
-      padding: 12px 30px;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    .btn-primary:hover { transform: scale(1.05); }
 
     /* ===== SECTIONS ===== */
     section {
@@ -411,4 +428,5 @@
   </script>
 </body>
 </html>
+
 
